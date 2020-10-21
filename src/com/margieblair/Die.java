@@ -1,5 +1,8 @@
 package com.margieblair;
 
+import java.util.Random;
+import java.security.SecureRandom;
+
 public class Die {
     //this is our die class for java
     private int value;
@@ -9,13 +12,20 @@ public class Die {
 
     public Die() {
         value = 1;
+        //by default, if there is no method level variable
+        //it will then go to the class level var
     }
-    public Die(int sides) {
-        value = 1;
-        this.sides = sides;
-    }
+//    public Die(int sides) {
+//        value = 1;
+//        this.sides = sides;
+//    }
     //in the instance that we're getting a different
     //type of die
+
+    public void roll(Random rand) {
+        value = rand.nextInt(sides) + 1;
+        //there'll also be a roll method in the hand class
+    }
 
 
 }
