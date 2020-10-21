@@ -27,4 +27,8 @@ public class Player {
     public void roll(Random rand, int choice) {
         dice.get(choice).roll(rand);
     }
+
+    public int getDieValue(int pos) {
+        return dice.get(pos).getValue();
+    }
 }
