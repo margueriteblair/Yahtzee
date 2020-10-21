@@ -10,15 +10,9 @@ public class Main {
         Player myHand = new Player();
         myHand.roll(rand);
         YahtzeeConsole.displayDice(myHand.getDice());
-        myHand.roll(rand);
         YahtzeeConsole.displayDice(myHand.getDice());
-        myHand.roll(rand);
         YahtzeeConsole.displayDice(myHand.getDice());
-        myHand.roll(rand);
         YahtzeeConsole.displayDice(myHand.getDice());
-
-
-
 
     }
 }
