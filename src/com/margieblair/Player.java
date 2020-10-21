@@ -31,4 +31,8 @@ public class Player {
     public int getDieValue(int pos) {
         return dice.get(pos).getValue();
     }
+
+    public List<Die> getDice() {
+        return dice;
+    }
 }

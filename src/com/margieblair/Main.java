@@ -27,7 +27,5 @@ public class Main {
         System.out.println(myHand.getDieValue(0));
         System.out.println(myHand.getDieValue(1));
         System.out.println(myHand.getDieValue(4));
-
-
     }
 }
