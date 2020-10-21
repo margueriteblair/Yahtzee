@@ -36,6 +36,13 @@ public class Player {
         return dice;
     }
 
+    public void roll(Random rand, List<Integer> choices) {
+        for (int choice : choices) {
+//            dice.get(choice).roll(rand); NOT DRY
+            roll(rand, choice);
+        }
+    }
+
 
 
 }

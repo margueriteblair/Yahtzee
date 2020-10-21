@@ -8,6 +8,7 @@ public class Main {
 	// write your code here
         Random rand = new Random();
         Player myHand = new Player();
+        myHand.roll(rand);
         YahtzeeConsole.displayDice(myHand.getDice());
         myHand.roll(rand);
         YahtzeeConsole.displayDice(myHand.getDice());
