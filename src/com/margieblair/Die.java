@@ -14,6 +14,7 @@ public class Die {
         value = 1;
         //by default, if there is no method level variable
         //it will then go to the class level var
+        //dunkin analogy
     }
 //    public Die(int sides) {
 //        value = 1;
@@ -22,9 +23,15 @@ public class Die {
     //in the instance that we're getting a different
     //type of die
 
+    //responsibility of roll is to roll, but not its responsibility to generate a number
     public void roll(Random rand) {
         value = rand.nextInt(sides) + 1;
+        //seed is a bound between 0 and up to but not including sides
         //there'll also be a roll method in the hand class
+    }
+
+    public int getValue() {
+        return value;
     }
 
 
