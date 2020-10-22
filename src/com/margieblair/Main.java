@@ -17,15 +17,9 @@ public class Main {
         while (count < 3) {
             YahtzeeConsole.displayDice(myHand.getDice());
             myHand.roll(rand, YahtzeeConsole.getChoices());
+            YahtzeeConsole.displayDice(myHand.getDice());
             count++;
         }
-//        YahtzeeConsole.displayDice(myHand.getDice());
-//        myHand.roll(rand, YahtzeeConsole.getChoices());
-//        YahtzeeConsole.displayDice(myHand.getDice());
-//        myHand.roll(rand, YahtzeeConsole.getChoices());
-//        YahtzeeConsole.displayDice(myHand.getDice());
-//        myHand.roll(rand, YahtzeeConsole.getChoices());
-//        YahtzeeConsole.displayDice(myHand.getDice());
 
     }
 }

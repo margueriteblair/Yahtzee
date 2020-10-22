@@ -27,18 +27,19 @@ public class YahtzeeConsole extends Console{
     }
 
     static public List<Integer> getChoices() {
-        System.out.println("Which dice do you want to reroll? 1-5 Ex: 1 2 4" );
-//        String input1 = scanner.next(); //1 2 4
-////        scanner.nextLine();
-//        String input2 = scanner.next();
-////        scanner.nextLine();
-//        String input3 = scanner.next();
+        System.out.println("Which die do you want to reroll? 1-5 Ex: 1 2 4. Or enter 0 to pass to the next player." );
+
         String input = scanner.nextLine(); //1 2 4
         //create a piece that'll check for negative numbers
-        //add some logic
+        //add some logic to prevent outsider values from getting in there
+        if (input.equals("0")) {
+            System.out.println("Exit app");
+            return new ArrayList<>(0);
+        }
         String[] inputArray = input.split(" ");
 
         List<Integer> choices = new ArrayList<>();
+
         for (String choice : inputArray) {
             choices.add(Integer.parseInt(choice) - 1);
         }
