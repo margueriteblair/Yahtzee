@@ -34,7 +34,8 @@ public class YahtzeeConsole extends Console{
 ////        scanner.nextLine();
 //        String input3 = scanner.next();
         String input = scanner.nextLine(); //1 2 4
-
+        //create a piece that'll check for negative numbers
+        //add some logic
         String[] inputArray = input.split(" ");
 
         List<Integer> choices = new ArrayList<>();
