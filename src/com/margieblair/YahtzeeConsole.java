@@ -1,7 +1,7 @@
 package com.margieblair;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
 public class YahtzeeConsole extends Console{
 
@@ -26,7 +26,7 @@ public class YahtzeeConsole extends Console{
 
     }
 
-    static public void getChoices() {
+    static public List<Integer> getChoices() {
         System.out.println("Which dice do you want to reroll? 1-5 Ex: 1 2 4" );
 //        String input1 = scanner.next(); //1 2 4
 ////        scanner.nextLine();
@@ -37,13 +37,11 @@ public class YahtzeeConsole extends Console{
 
         String[] inputArray = input.split(" ");
 
-        int[] choices = new int[input.length()];
-        for (int i = 0; i < input.length(); i++) {
-            choices[i] = Integer.parseInt(inputArray[i]) - 1;
+        List<Integer> choices = new ArrayList<>();
+        for (String choice : inputArray) {
+            choices.add(Integer.parseInt(choice) - 1);
         }
-
-
-
+        return choices;
 
     }
 }
