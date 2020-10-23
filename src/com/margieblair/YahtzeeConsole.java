@@ -44,13 +44,16 @@ public class YahtzeeConsole extends Console{
             System.out.println(negative.get(0));
             return negative;
         }
+
         String[] inputArray = input.split(" ");
-
-
-
         List<Integer> choices = new ArrayList<>();
-
         for (String choice : inputArray) {
+            if (Integer.parseInt(choice) > 5) {
+                ArrayList aboveFive = new ArrayList();
+                aboveFive.add(6);
+                System.out.println("Please only input numbers that are between 1 and 5.");
+                return aboveFive;
+            }
             choices.add(Integer.parseInt(choice) - 1);
         }
         return choices;
