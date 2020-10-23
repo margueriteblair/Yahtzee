@@ -16,7 +16,10 @@ public class Main {
         Player myHand = new Player();
         myHand.roll(rand);
         YahtzeeConsole.displayDice(myHand.getDice());
-        YahtzeeConsole.getChoices();
+        if (YahtzeeConsole.getChoices().isEmpty()) {
+            System.out.println("You are passing your turn to the next player");
+            return;
+        };
 //        while (count < 3) {
 //            YahtzeeConsole.displayDice(myHand.getDice());
 //            myHand.roll(rand, YahtzeeConsole.getChoices());
