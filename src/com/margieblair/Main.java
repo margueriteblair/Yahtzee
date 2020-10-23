@@ -19,7 +19,11 @@ public class Main {
         if (YahtzeeConsole.getChoices().isEmpty()) {
             System.out.println("You are passing your turn to the next player");
             return;
-        };
+        } else {
+            YahtzeeConsole.displayDice(myHand.getDice());
+            myHand.roll(rand, YahtzeeConsole.getChoices());
+            YahtzeeConsole.displayDice(myHand.getDice());
+        }
 //        while (count < 3) {
 //            YahtzeeConsole.displayDice(myHand.getDice());
 //            myHand.roll(rand, YahtzeeConsole.getChoices());
