@@ -41,7 +41,11 @@ public class YahtzeeConsole extends Console{
         List<Integer> choices = new ArrayList<>();
 
         for (String choice : inputArray) {
-
+            if (Integer.parseInt(choice) < 0) {
+                ArrayList negativeArrList = new ArrayList<>();
+                negativeArrList.add((-1));
+                return negativeArrList;
+            }
             choices.add(Integer.parseInt(choice) - 1);
         }
         return choices;
