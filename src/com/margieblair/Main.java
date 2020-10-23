@@ -14,18 +14,22 @@ public class Main {
         String player;
         YahtzeeConsole.welcome();
         Player myHand = new Player();
-        myHand.roll(rand);
-        YahtzeeConsole.displayDice(myHand.getDice());
-        if (YahtzeeConsole.getChoices().isEmpty()) {
-            System.out.println("You are passing your turn to the next player");
-            return;
-        } else if (YahtzeeConsole.getChoices().get(0) == -1) {
-            System.out.println("Please only input a positive integer 1 - 5");
-        } else {
+
+        while (true) {
+            myHand.roll(rand);
             YahtzeeConsole.displayDice(myHand.getDice());
-            myHand.roll(rand, YahtzeeConsole.getChoices());
-            YahtzeeConsole.displayDice(myHand.getDice());
+            if (YahtzeeConsole.getChoices().isEmpty()) {
+                System.out.println("You are passing your turn to the next player");
+                return;
+            } else if (YahtzeeConsole.getChoices().get(0).equals(-1)) {
+                System.out.println("Please only input a POSITIVE integer 1 - 5");
+            } else {
+                YahtzeeConsole.displayDice(myHand.getDice());
+                myHand.roll(rand, YahtzeeConsole.getChoices());
+                YahtzeeConsole.displayDice(myHand.getDice());
+            }
         }
+
 //        while (count < 3) {
 //            YahtzeeConsole.displayDice(myHand.getDice());
 //            myHand.roll(rand, YahtzeeConsole.getChoices());

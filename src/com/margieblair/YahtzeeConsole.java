@@ -36,16 +36,21 @@ public class YahtzeeConsole extends Console{
             System.out.println("Exit app");
             return new ArrayList<>();
         }
+
+        if (input.contains("-")) {
+            System.out.println("Cannot use negative numbers");
+            ArrayList<Integer> negative = new ArrayList<>();
+            negative.add(-1);
+            System.out.println(negative.get(0));
+            return negative;
+        }
         String[] inputArray = input.split(" ");
+
+
 
         List<Integer> choices = new ArrayList<>();
 
         for (String choice : inputArray) {
-            if (Integer.parseInt(choice) < 0) {
-                ArrayList negativeArrList = new ArrayList<>();
-                negativeArrList.add((-1));
-                return negativeArrList;
-            }
             choices.add(Integer.parseInt(choice) - 1);
         }
         return choices;
