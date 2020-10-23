@@ -21,8 +21,8 @@ public class Main {
             if (YahtzeeConsole.getChoices().isEmpty()) {
                 System.out.println("You are passing your turn to the next player");
                 return;
-            } else if (YahtzeeConsole.getChoices().get(0).equals(-1)) {
-                System.out.println("Please only input a POSITIVE integer 1 - 5");
+            } else if (YahtzeeConsole.getChoices().get(0).equals(-1) || YahtzeeConsole.getChoices().get(0).equals(6)) {
+                System.out.println("Please only input a POSITIVE integer that is between 1 - 5");
             } else {
                 YahtzeeConsole.displayDice(myHand.getDice());
                 myHand.roll(rand, YahtzeeConsole.getChoices());
