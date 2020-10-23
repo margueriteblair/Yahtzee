@@ -34,13 +34,14 @@ public class YahtzeeConsole extends Console{
         //add some logic to prevent outsider values from getting in there
         if (input.equals("0")) {
             System.out.println("Exit app");
-            return new ArrayList<>(0);
+            return new ArrayList<>();
         }
         String[] inputArray = input.split(" ");
 
         List<Integer> choices = new ArrayList<>();
 
         for (String choice : inputArray) {
+
             choices.add(Integer.parseInt(choice) - 1);
         }
         return choices;

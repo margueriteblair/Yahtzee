@@ -1,5 +1,6 @@
 package com.margieblair;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
@@ -14,12 +15,14 @@ public class Main {
         YahtzeeConsole.welcome();
         Player myHand = new Player();
         myHand.roll(rand);
-        while (count < 3) {
-            YahtzeeConsole.displayDice(myHand.getDice());
-            myHand.roll(rand, YahtzeeConsole.getChoices());
-            YahtzeeConsole.displayDice(myHand.getDice());
-            count++;
-        }
+        YahtzeeConsole.displayDice(myHand.getDice());
+        YahtzeeConsole.getChoices();
+//        while (count < 3) {
+//            YahtzeeConsole.displayDice(myHand.getDice());
+//            myHand.roll(rand, YahtzeeConsole.getChoices());
+//            YahtzeeConsole.displayDice(myHand.getDice());
+//            count++;
+//        }
 
     }
 }
