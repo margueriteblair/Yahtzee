@@ -17,7 +17,23 @@ public class ScoreBoard {
         for (var die : finalDie) {
             upperScore += die;
         }
+        return upperScore;
     }
+
+    public int threeOfAKind(int[] finalDie) {
+        return upperScore;
+    }
+
+    public int fourOfAKind(int[] finalDie) {
+        return upperScore;
+    }
+
+    public int fullHouse(int[] finalDie) {
+        for (var die : finalDie) {
+            if (die)
+        }
+    }
+
 
 
 }
