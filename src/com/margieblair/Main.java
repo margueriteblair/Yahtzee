@@ -26,8 +26,7 @@ public class Main {
                 } else {
                     YahtzeeConsole.displayDice(myHand.getDice());
                     myHand.roll(rand, YahtzeeConsole.getChoices());
-                    YahtzeeConsole.displayDice(myHand.getDice());
-                    System.out.println("Count is now " + count);
+//                    YahtzeeConsole.displayDice(myHand.getDice());
                 }
                 count++;
             }
