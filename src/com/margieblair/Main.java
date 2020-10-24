@@ -10,12 +10,12 @@ public class Main {
         int count = 0;
         int score=0;
         Random rand = new Random();
-        YahtzeeConsole.welcome();
         Player myHand = new Player();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             while (count < 3) {
+                if (count == 0) YahtzeeConsole.welcome();
                 myHand.roll(rand);
                 YahtzeeConsole.displayDice(myHand.getDice());
                 if (YahtzeeConsole.getChoices().isEmpty()) {
@@ -35,14 +35,8 @@ public class Main {
             score = scanner.nextInt();
             System.out.println("Your final score is " + score + ", would you like to play again (1), or exit the game? (2)");
             int option = scanner.nextInt();
-            if (option == 1) {
-                continue; //WOOF OKAY THIS DOES NOT WORK
-            } else if (option == 2) {
-                break;
-            } else {
-                System.out.println("Invalid option.");
-
-            }
+            if (option == 2) break;
+            if (option == 1) count = 0;
 
         }
 
