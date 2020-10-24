@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ScoreBoard {
+    //try to make hashmap with key being the score, value being the arraylist/[]
+    //THIS IS A DRAFT NOT INTEGRATED INTO THE REST OF THE PROGRAM RIGHT NOW!!
     public Map<Integer, int[]> onlyOnes = new HashMap<>();
     private int upperScore = 0;
 
@@ -29,9 +31,7 @@ public class ScoreBoard {
     }
 
     public int fullHouse(int[] finalDie) {
-        for (var die : finalDie) {
-            if (die)
-        }
+        return 5;
     }
 
 
