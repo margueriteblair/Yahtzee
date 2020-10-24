@@ -17,8 +17,10 @@ public class Main {
             myHand.roll(rand);
             System.out.println();
             while (count < 3) {
-                if (count == 0) YahtzeeConsole.welcome();
-//                //this is where myHand.roll(rand) went before
+
+                try {
+                    if (count == 0) YahtzeeConsole.welcome();
+                    //                //this is where myHand.roll(rand) went before
 //                //YahtzeeConsole.displayDice(myHand.getDice()):
 //                if (YahtzeeConsole.getChoices().isEmpty()) {
 //                    System.out.println("You are passing your turn to the next player");
@@ -33,6 +35,12 @@ public class Main {
                     YahtzeeConsole.displayDice(myHand.getDice());
 
 //                }
+                } catch (NumberFormatException ex) {
+                    System.out.println("Input has to be in the form of a number! Restarting game...");
+                    count = 0;
+                    continue;
+                }
+
                 count++;
             }
             System.out.println("Tally your score and input your final score:");
