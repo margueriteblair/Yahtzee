@@ -14,14 +14,13 @@ public class YahtzeeConsole extends Console{
         for (var die : dice) {
             System.out.print(die.getValue() + " ");
         }
-        System.out.println("\n-------------");
+//        System.out.println("\n-------------");
     }
 
     static public int getChoice() {
         System.out.print("What die to you want to roll? 1-5: ");
         int input = scanner.nextInt()-1;
         return input;
-
         //Integer.parseInt("2") this would also work
 
     }
@@ -45,7 +44,6 @@ public class YahtzeeConsole extends Console{
             if (Integer.parseInt(choice) > 5) {
                 ArrayList aboveFive = new ArrayList();
                 aboveFive.add(6);
-                System.out.println("Please only input numbers that are between 1 and 5.");
                 return aboveFive;
             }
             choices.add(Integer.parseInt(choice) - 1);
