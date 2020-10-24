@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Player {
-    //.add() methods are useful
     private List<Die> dice;
 
     public Player() {
@@ -25,7 +24,13 @@ public class Player {
     }
 
     public void roll(Random rand, int choice) {
-        dice.get(choice).roll(rand);
+        try {
+            dice.get(choice).roll(rand);
+        } catch (IndexOutOfBoundsException ex) {
+            System.out.println("You can only input 1 - 5. Restarting...");
+        } finally {
+            //something
+        }
     }
 
     public int getDieValue(int pos) {
