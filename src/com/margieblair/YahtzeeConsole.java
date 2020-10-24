@@ -14,6 +14,7 @@ public class YahtzeeConsole extends Console{
         for (var die : dice) {
             System.out.print(die.getValue() + " ");
         }
+        System.out.println("\n");
 
     }
 
