@@ -27,13 +27,16 @@ public class Main {
                     YahtzeeConsole.displayDice(myHand.getDice());
                     myHand.roll(rand, YahtzeeConsole.getChoices());
                     YahtzeeConsole.displayDice(myHand.getDice());
+                    System.out.println("Count is now " + count);
                 }
                 count++;
             }
+            System.out.println("Tally your score and input your final score:");
+            score = scanner.nextInt();
             System.out.println("Your final score is " + score + ", would you like to play again (1), or exit the game? (2)");
             int option = scanner.nextInt();
             if (option == 1) {
-                continue;
+                continue; //WOOF OKAY THIS DOES NOT WORK
             } else if (option == 2) {
                 break;
             } else {
