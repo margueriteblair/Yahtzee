@@ -2,19 +2,17 @@ package com.margieblair;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        //create a game loop!
-        //lol i should actually learn how yahtzee works in order to do this
         int count = 0;
         int score=0;
         Random rand = new Random();
-        String player;
         YahtzeeConsole.welcome();
         Player myHand = new Player();
+        Scanner scanner = new Scanner(System.in);
 
         while (true) {
             while (count < 3) {
@@ -33,15 +31,18 @@ public class Main {
                 count++;
             }
             System.out.println("Your final score is " + score + ", would you like to play again (1), or exit the game? (2)");
+            int option = scanner.nextInt();
+            if (option == 1) {
+                continue;
+            } else if (option == 2) {
+                break;
+            } else {
+                System.out.println("Invalid option.");
+
+            }
 
         }
 
-//        while (count < 3) {
-//            YahtzeeConsole.displayDice(myHand.getDice());
-//            myHand.roll(rand, YahtzeeConsole.getChoices());
-//            YahtzeeConsole.displayDice(myHand.getDice());
-//            count++;
-//        }
 
     }
 }
