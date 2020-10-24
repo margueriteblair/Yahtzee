@@ -10,11 +10,11 @@ public class YahtzeeConsole extends Console{
     }
 
     static public void displayDice(List<Die> dice) {
-        System.out.println("--------------");
+        System.out.println("--------------\n");
         for (var die : dice) {
             System.out.print(die.getValue() + " ");
         }
-//        System.out.println("\n-------------");
+
     }
 
     static public int getChoice() {
