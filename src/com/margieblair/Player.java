@@ -15,8 +15,6 @@ public class Player {
         }
     }
 
-    //we want to roll die in the hand
-
     public void roll(Random rand) {
         for (var die: dice) {
             die.roll(rand);
