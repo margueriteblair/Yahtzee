@@ -3,6 +3,9 @@ package com.margieblair;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+//OR YOU CAN USE THE SET INTERFACE
+//WHEN THE PLAYERS TURN ENDS, THEIR DIE GET TURNED INTO A SET FOR LOWER SCORES
+//WE CAN SEE ONLY THE UNIQUE VALUES
 
 public class ScoreBoard {
     //try to make hashmap with key being the score, value being the arraylist/[]
