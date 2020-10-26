@@ -19,7 +19,7 @@ public class YahtzeeConsole extends Console{
     }
 
     static public ArrayList<Integer> getChoices() {
-        System.out.println("Which die do you want to reroll? 1-5 Input them all one one like ex: 1 5 2. Or enter 0 to pass to the next player." );
+        System.out.println("Which die do you want to reroll? 1-5 Input them all one one like ex: 1 5 2." );
         String input = scanner.nextLine();
         List<Integer> choices = new ArrayList<>();
         String[] inputArray = input.split(" ");
