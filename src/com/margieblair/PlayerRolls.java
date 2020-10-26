@@ -27,6 +27,7 @@ public class PlayerRolls {
     }
 
     public static void setCount(int newCount) {
+
         count = newCount;
     }
 }

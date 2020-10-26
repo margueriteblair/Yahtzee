@@ -25,6 +25,7 @@ public class Player {
             dice.get(choice).roll(rand);
         } catch (IndexOutOfBoundsException ex) {
             System.out.println("You can only input 1 - 5. Restarting...");
+            PlayerRolls.setCount(-1);
         }
     }
 
