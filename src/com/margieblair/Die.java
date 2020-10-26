@@ -5,8 +5,7 @@ import java.security.SecureRandom;
 
 public class Die {
     private int face;
-
-    private int sides = 6;
+    private int sides;
 
     public Die() {
         this.sides = 6;
