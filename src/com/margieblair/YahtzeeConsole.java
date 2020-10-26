@@ -1,5 +1,6 @@
 package com.margieblair;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -17,15 +18,20 @@ public class YahtzeeConsole extends Console{
         }
     }
 
-    static public List<Integer> getChoices() {
+    static public ArrayList<Integer> getChoices() {
         System.out.println("Which die do you want to reroll? 1-5 Input them all one one like ex: 1 5 2. Or enter 0 to pass to the next player." );
         String input = scanner.nextLine();
-        String[] inputArray = input.split(" ");
         List<Integer> choices = new ArrayList<>();
-        for (String choice : inputArray) {
-            choices.add(Integer.parseInt(choice) - 1);
-        }
-        return choices; //returns List
+        String[] inputArray = input.split(" ");
+        Arrays.stream(inputArray)
+                .map(choice -> Integer.parseInt(choice))
+                .forEach(choice -> choices.add(choice-1));
+//        String[] inputArray = input.split(" ");
+//        List<Integer> choices = new ArrayList<>();
+//        for (String choice : inputArray) {
+//            choices.add(Integer.parseInt(choice) - 1);
+//        }
+        return (ArrayList<Integer>) choices;
 
     }
 }

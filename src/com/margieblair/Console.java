@@ -8,6 +8,4 @@ public class Console {
         System.out.println("Welcome to " + game);
     }
 
-
-
 }
