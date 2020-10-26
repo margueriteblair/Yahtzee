@@ -3,9 +3,11 @@ package com.margieblair;
 import java.util.Random;
 
 public class PlayerRolls {
+    private int count = 0;
+    Random rand = new Random();
+
     public static void turn(Player myHand) {
-        int count = 0;
-        Random rand = new Random();
+
         while (count < 3) {
             try {
                 if (count == 0) YahtzeeConsole.welcome();
@@ -18,5 +20,13 @@ public class PlayerRolls {
             }
             count++;
         }
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int newCount) {
+        count = newCount;
     }
 }
