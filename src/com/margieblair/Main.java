@@ -22,7 +22,6 @@ public class Main {
             int option = scanner.nextInt();
             if (option == 2) break;
             if (option == 1) count = 0;
-
         }
     }
 
