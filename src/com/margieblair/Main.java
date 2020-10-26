@@ -15,21 +15,7 @@ public class Main {
         while (true) {
             myHand.roll(rand);
             System.out.println();
-            while (count < 3) {
-                try {
-                    if (count == 0) YahtzeeConsole.welcome();
-                    YahtzeeConsole.displayDice(myHand.getDice());
-//                    System.out.println();
-                    myHand.roll(rand, YahtzeeConsole.getChoices());
-                    YahtzeeConsole.displayDice(myHand.getDice());
-//                }
-                } catch (NumberFormatException ex) {
-                    System.out.println("Input has to be in the form of a number 1 - 5! Restarting game...");
-                    count = 0;
-                    continue;
-                }
-                count++;
-            }
+            PlayerRolls.turn(myHand);
             System.out.println("Tally your score and input your final score:");
             score = scanner.nextInt();
             System.out.println("Your final score is " + score + ", would you like to play again (1), or exit the game? (2)");
