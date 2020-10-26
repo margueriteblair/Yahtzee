@@ -26,24 +26,22 @@ public class Player {
             dice.get(choice).roll(rand);
         } catch (IndexOutOfBoundsException ex) {
             System.out.println("You can only input 1 - 5. Restarting...");
-        } finally {
-            //something
         }
     }
 
-    public int getDieValue(int pos) {
-        return dice.get(pos).getValue();
+
+    public void roll(Random rand, List<Integer> choices) {
+        for (int choice : choices) {
+            roll(rand, choice);
+        }
     }
 
     public List<Die> getDice() {
         return dice;
     }
 
-    public void roll(Random rand, List<Integer> choices) {
-        for (int choice : choices) {
-//            dice.get(choice).roll(rand); NOT DRY
-            roll(rand, choice);
-        }
+    public int getDieValue(int index) {
+        return dice.get(index).getValue();
     }
 
 
