@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int count = 0; //this isn't dry, use the setter in PlayerRolls to reset count = 0 when game resets
         int score=0;
         Random rand = new Random();
         Player myHand = new Player();
@@ -21,8 +20,9 @@ public class Main {
             System.out.println("Your final score is " + score + ", would you like to play again (1), or exit the game? (2)");
             int option = scanner.nextInt();
             if (option == 2) break;
-            if (option == 1) count = 0;
+            if (option == 1) PlayerRolls.setCount(0);
         }
+
 
 
     }

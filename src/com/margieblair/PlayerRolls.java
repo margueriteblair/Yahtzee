@@ -22,11 +22,11 @@ public class PlayerRolls {
         }
     }
 
-    public int getCount() {
+    public static int getCount() {
         return count;
     }
 
-    public void setCount(int newCount) {
+    public static void setCount(int newCount) {
         count = newCount;
     }
 }
