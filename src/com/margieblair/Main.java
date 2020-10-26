@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int count = 0;
+        int count = 0; //this isn't dry, use the setter in PlayerRolls to reset count = 0 when game resets
         int score=0;
         Random rand = new Random();
         Player myHand = new Player();
