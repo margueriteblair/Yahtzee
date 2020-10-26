@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        //margie, change these from method scope fields
         int score=0;
         Random rand = new Random();
         Player myHand = new Player();
