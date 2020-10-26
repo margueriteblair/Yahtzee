@@ -9,7 +9,6 @@ public class Player {
 
     public Player() {
         dice = new ArrayList<>();
-        //resets arraylist to a brand new clean arraylist
         for (int count = 0; count < 5; count++) {
             dice.add(new Die());
         }
@@ -29,13 +28,11 @@ public class Player {
         }
     }
 
-
     public void roll(Random rand, List<Integer> choices) {
         for (int choice : choices) {
             roll(rand, choice);
         }
     }
-
     public List<Die> getDice() {
         return dice;
     }

@@ -15,11 +15,10 @@ public class YahtzeeConsole extends Console{
         for (var die : currentDice) {
             System.out.print(die.getValue() + " ");
         }
-        System.out.println("\n");
     }
 
     static public List<Integer> getChoices() {
-        System.out.println("Which die do you want to reroll? 1-5 Ex: 1 2 4. Or enter 0 to pass to the next player." );
+        System.out.println("Which die do you want to reroll? 1-5 Input them all one one like ex: 1 5 2. Or enter 0 to pass to the next player." );
         String input = scanner.nextLine();
         String[] inputArray = input.split(" ");
         List<Integer> choices = new ArrayList<>();
